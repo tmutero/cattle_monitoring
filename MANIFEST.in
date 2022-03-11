@@ -1,0 +1,4 @@
+recursive-include cattle_monitor/public *
+include cattle_monitor/public/favicon.ico
+recursive-include cattle_monitor/i18n *
+recursive-include cattle_monitor/templates *

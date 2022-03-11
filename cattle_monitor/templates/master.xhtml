@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+
+ <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet"/>
+  <!-- CSS Files -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <script src="/js/plugins/jquery-3.6.0.min.js"></script>
+   <script src="/js/core/jquery.min.js"></script>
+  <script src="/js/core/popper.min.js"></script>
+      <script src="/js/core/bootstrap.min.js"></script>
+  <script src="/js/jquery.validate.min.js"></script>
+  <script src="/js/jquery.redirect.js"></script>
+
+  <script src="/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
+  <script src="/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="/js/plugins/bootstrap-notify.js"></script>
+
+
+    <script src="/js/jquery_utils.js"></script>
+
+  <script  src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+  <script  src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+  <script  src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+
+
+
+  <title py:block="master_title">Cattle Monitor Portal</title>
+
+  <py:block name="head"></py:block>
+</head>
+
+<body class="">
+    <div id="notifdiv"></div>
+    <div id="dialogdiv"></div>
+  <div class="wrapper ">
+    <div id="sidebarDiv"></div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="javascript:;">DashBoard</a>
+          </div>
+
+        </div>
+      </nav>
+
+      <div class="content">
+
+        <py:block name="body">
+
+        </py:block>
+    </div>
+
+      <footer class="footer footer-black  footer-white ">
+        <div class="container-fluid">
+          <div class="row">
+            <nav class="footer-nav">
+              <ul>
+              </ul>
+            </nav>
+            <div class="credits ml-auto">
+              <span class="copyright">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>, made with <i class="fa fa-heart heart"></i> by Cattle Monitoring
+              </span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+	$(document).ready(function () {
+		$('#sidebarDiv').load('/home/get_sidebar_html');
+	});
+</script>
+</body>
+
+</html>

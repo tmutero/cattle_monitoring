@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "drop database if exists cattle_monitor_db; create database cattle_monitor_db collate 'utf8_unicode_ci'; grant all on cattle_monitor_db.* to 'developer'@'localhost' identified by 'developpass';" | mysql -p -uroot;
